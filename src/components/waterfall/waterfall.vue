@@ -1,7 +1,7 @@
 <template>
   <div class="waterfall_container">
     <div class="waterfall_wrap" v-bind:class="{shouldfloat: isfloat}">
-      <div class="waterfall_item" v-bind:class="{waterfall_item_small: isSmall}">
+      <div class="waterfall_item">
         <img class="waterfall_item_img" src="../../assets/imgs/goods.jpg" alt="">
         <p>优乐多酸奶饮料牛奶100ml*20瓶</p>
         <div class="waterfall_item_bottom">
@@ -9,7 +9,7 @@
           <div class="waterfall_item_add"></div>
         </div>
       </div>
-      <div class="waterfall_item" v-bind:class="{waterfall_item_small: isSmall}">
+      <div class="waterfall_item">
         <img class="waterfall_item_img" src="../../assets/imgs/goods.jpg" alt="">
         <p>优乐多酸奶饮料牛奶100ml*20瓶</p>
         <div class="waterfall_item_bottom">
@@ -17,7 +17,7 @@
           <div class="waterfall_item_add"></div>
         </div>
       </div>
-      <div class="waterfall_item" v-bind:class="{waterfall_item_small: isSmall}">
+      <div class="waterfall_item">
         <img class="waterfall_item_img" src="../../assets/imgs/goods.jpg" alt="">
         <p>优乐多酸奶饮料牛奶100ml*20瓶</p>
         <div class="waterfall_item_bottom">
@@ -25,7 +25,7 @@
           <div class="waterfall_item_add"></div>
         </div>
       </div>
-      <div class="waterfall_item" v-bind:class="{waterfall_item_small: isSmall}">
+      <div class="waterfall_item">
         <img class="waterfall_item_img" src="../../assets/imgs/goods.jpg" alt="">
         <p>优乐多酸奶饮料牛奶100ml*20瓶</p>
         <div class="waterfall_item_bottom">
@@ -33,7 +33,7 @@
           <div class="waterfall_item_add"></div>
         </div>
       </div>
-      <div class="waterfall_item" v-bind:class="{waterfall_item_small: isSmall}">
+      <div class="waterfall_item">
         <img class="waterfall_item_img" src="../../assets/imgs/goods.jpg" alt="">
         <p>优乐多酸奶饮料牛奶100ml*20瓶</p>
         <div class="waterfall_item_bottom">

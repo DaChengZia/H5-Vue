@@ -24,21 +24,9 @@
                     </form>
                 </div>
                 <div class="weui-tab" id="t1" style="height:auto;">
-                    <div class="weui-navbar">
-                        <div class="weui-navbar__item weui-navbar__item_active">
-                            全部
-                            <span></span>
-                        </div>
-                        <div class="weui-navbar__item">
-                            本店好货
-                        </div>
-                        <div class="weui-navbar__item">
-                            六环服饰
-                        </div>
-                        <div class="weui-navbar__item">
-                            星夜生活
-                        </div>
-                    </div>
+                    <tab>
+                        <tab-item :currentSelected="index === 0" :class="{'tab-selected-type1': index===0}" v-for="(item, index) in tabList" :key="index">{{item}}</tab-item>
+                    </tab>
                     <div class="weui-tab__panel">
                         <div id="s0" class="weui-tab__content" style="display: block; opacity: 1;">
                             <!-- 老板推荐 -->
@@ -47,7 +35,16 @@
                                     <h2 class="recommend">老板推荐</h2>
                                     <div class="recommend-more">更多<span></span></div>
                                 </div>
-                                <Waterfall :isSmall="true" />
+                                <div class="recommend-content">
+                                    <div class="recommend-item" v-for="(item,index) in recommendData" :key="index">
+                                        <img class="recommend-item-img" src="../../assets/imgs/goods.jpg" alt="">
+                                        <p>{{item.title}}</p>
+                                        <div class="recommend-item-bottom">
+                                            <div><span class="recommend-item-price">{{item.price}}</span>{{item.others}}</div>
+                                            <div class="recommend-item-add"></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <!-- swiper轮播图 -->
                             <div class="swiper_container">
@@ -59,20 +56,9 @@
                             </div>
                             <!-- <Swiper :list="demo03_list" auto style="width:80%;margin:0 auto;" height="180px" dots-class="custom-bottom" dots-position="center"></Swiper> -->
                             <div class="weui-tab" id="t1_1" style="height:auto;">
-                                <div class="weui-navbar weui-navbar-greey">
-                                    <div class="weui-navbar__item weui-navbar__item_active1">
-                                        热卖商品
-                                    </div>
-                                    <div class="weui-navbar__item">
-                                        食品饮料
-                                    </div>
-                                    <div class="weui-navbar__item">
-                                        粮油副食
-                                    </div>
-                                    <div class="weui-navbar__item">
-                                        家居清洁
-                                    </div>
-                                </div>
+                                <tab>
+                                    <tab-item :currentSelected="index === 0" :class="{'tab-selected-type2': index===0}" v-for="(item, index) in tabList1" :key="index">{{item}}</tab-item>
+                                </tab>
                                 <div class="weui-tab__panel">
                                     <div id="s0" class="weui-tab__content" style="display: block; opacity: 1;">
                                         <Waterfall :isfloat='true' />
@@ -94,12 +80,49 @@
 </template>
 
 <script>
-    import { Waterfall } from '../../components/index.js';
+    import { Waterfall, Tab, TabItem } from '../../components/index.js';
+    const tabList = ['全部', '本店好货', '六环服饰', '星夜生活'];
+    const tabList1 = ['热卖商品', '食品饮料', '粮油副食', '家居清洁', '食品饮料', '粮油副食', '家居清洁'];
+    const recommendData = [
+        {
+            src: '../../assets/imgs/goods.jpg',
+            title: '优乐多酸奶饮料牛奶100ml*20瓶',
+            price: '￥24.90',
+            others: '/盒'
+        },
+        {
+            src: '../../assets/imgs/goods.jpg',
+            title: '优乐多酸奶饮料牛奶100ml*20瓶',
+            price: '￥24.90',
+            others: '/盒'
+        },
+        {
+            src: '../../assets/imgs/goods.jpg',
+            title: '优乐多酸奶饮料牛奶100ml*20瓶',
+            price: '￥24.90',
+            others: '/盒'
+        },
+        {
+            src: '../../assets/imgs/goods.jpg',
+            title: '优乐多酸奶饮料牛奶100ml*20瓶',
+            price: '￥24.90',
+            others: '/盒'
+        },
+    ]
 
     export default {
         name: 'homePage',
         components: {
-            Waterfall
+            Waterfall,
+            Tab,
+            TabItem,
         },
+        data () {
+            return {
+                tabList,
+                tabList1,
+                recommendData
+            }
+        }
     }
 </script>

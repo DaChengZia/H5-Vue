@@ -1,7 +1,7 @@
 /************* Style for Home page ******************/
 .homePage {
   .collectCoin{
-    background: green;
+    background: #26ce9a;
     color: #fff;
   }
   .homePage_wrap {
@@ -27,16 +27,19 @@
 }
 .weui-search-bar__form,
 .weui-search-bar__label {
-  background-color: #ededed;
+  background-color: #f5f6f8;
 }
 .weui {
+  &-tabbar {
+    background-color: #fff;
+  }
   &-tab__content {
-    background: #ededed;
+    background: #f8faf9;
   }
   &-navbar {
     background: #fff;
     &-greey {
-      background: #ededed;
+      background: #f8faf9;
     }
     &__item {
       &_active {
@@ -46,7 +49,7 @@
         }
       }
       &_active1 {
-        color: green;
+        color: #26ce9a;
         &:before {
           background: url(../../../assets/icons/index/icon_z.png) no-repeat;
           background-size: contain;
@@ -85,24 +88,39 @@
     color: rgba(0, 0, 0, 0.3);
   }
 }
+/************* Style for Tab ******************/
+
+.tab-selected-type1 {
+  &:before {
+    background: url(../../../assets/icons/index/icon_nev.png) no-repeat;
+    background-size: contain;
+  }
+}
+.tab-selected-type2 {
+  color: #26ce9a;
+  &:before {
+    background: url(../../../assets/icons/index/icon_z.png) no-repeat;
+    background-size: contain;
+  }
+}
 /************* Style for Waterfall ******************/
 .waterfall{
   &_item {
     background: #fff;
     &_add {
-      background: url(../../../assets/icons/index/icon_add.png) green no-repeat center;
+      background: url(../../../assets/icons/index/icon_add.png) #26ce9a no-repeat center;
       background-size:8px;
     }
     &_price {
-      color: orange;
+      color: #ff9d4b;
     }
   }
 }
 /************* Style for Swiper ******************/
 .swiper_dot {
-  background: orange;
+  background: #ff9d4b;
 }
 /************* Style for chooseMerchant ******************/
 .chooseMerchant_Wrap {
-  background-color: #ededed;
+  background-color: #f8faf9;
 }

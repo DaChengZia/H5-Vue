@@ -1,11 +1,12 @@
 import List from './list/List.vue';
 import Panel from './panels/Panel.vue';
-import Tabs from './tabs/Tabs.vue';
+import {Tab, TabItem} from './tabs/';
 import Waterfall from './waterfall/waterfall.vue';
 
 export {
   List,
   Panel,
-  Tabs,
+  Tab,
+  TabItem,
   Waterfall
 }

@@ -4,6 +4,7 @@
 *:after {
   box-sizing: border-box;
 }
+
 body {
   background-color: #fff;
 }
@@ -105,20 +106,61 @@ html {
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-right: 4px;
             span {
                 display: inline-block;
-                width: 10px;
-                height: 12px;
+                width: 6px;
+                height: 11px;
                 margin-left: 2px;
                 margin-top: 1px;
             }
+        }
+        &-content {
+          white-space: nowrap;
+          overflow-y: auto;
+          &::-webkit-scrollbar{
+            display: none;
+            background-color:transparent;
+        }
+        }
+        &-item {
+          display: inline-flex;
+          flex-direction: column;
+          width: 100px;
+          margin-left: 15px;
+          margin-top: 9px;
+          p {
+            font-size: 10px;
+            white-space: break-spaces;
+          }
+          &-img {
+            width: 80px;
+            height: 80px;
+            margin: 10px;
+            display: block;
+          }
+          &-bottom {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+          }
+          &-price {
+            color: orange;
+            font-size: 12px;
+          }
+          &-add {
+            width: 18px;
+            height: 18px;
+            border-radius: 10px;
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAAHeEJUAAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDAyIDc5LjE2NDM1MiwgMjAyMC8wMS8zMC0xNTo1MDozOCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIxLjEgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjA5MjcyRENCN0IzNzExRUJBQjU5REVEQ0NEMTNCNDQxIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjA5MjcyRENDN0IzNzExRUJBQjU5REVEQ0NEMTNCNDQxIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDkyNzJEQzk3QjM3MTFFQkFCNTlERURDQ0QxM0I0NDEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDkyNzJEQ0E3QjM3MTFFQkFCNTlERURDQ0QxM0I0NDEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5xK7VhAAAA80lEQVR42mL4//8/AxDLgWgYAwwYwSJAMSBmBAggBmRlLFBREJBHUQYQQDAOA5IKRhDBBMRySIIwBfLIOuSgqh+COAABBLMRhD/D2Ojmw83+iWQ2iP7JxIAJGHFqh4GvMAZAACGrhAGQHWxA/BeIWVDMxaIYWYARWQJk3Weogv9oChnQxH+SbDI6+AWl/6JLAAQQNpN3QWk3Yj1H0HqsgCSFu3AEFbLYLpAb/xNr4h4i1O0ZQF+zYHMPNoUAAYacQ3Dh3f9RwX5CehiJCElsChip4ndSAM0M3Y2WvP7jya3YkiM63k8Tl45GFOFcjMY/QEgDAO2e2g+iIAA+AAAAAElFTkSuQmCC) #26ce9a no-repeat center;
+            background-size: 8px;
+          }
         }
     }
   }
 }
 /************* Style for weui ******************/
 .weui {
-
   &-navbar {
     &:after {
       visibility: hidden;
@@ -186,6 +228,49 @@ html {
     padding-bottom: 6px;
   }
 }
+/************* Style for Tab ******************/
+.tab-item {
+  padding: 6px 16px;
+  font-size: 14px;
+}
+.tab-selected-type1 {
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    left: calc(50% - 12px);
+    bottom: -6px;
+    width: 24px;
+    height: 10px;
+
+  }
+}
+.tab-selected-type2 {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    left: calc(50% - 12px);
+    bottom: -3px;
+    width: 33px;
+    height: 6px;
+  }
+}
+.tab-container {
+  overflow-y: auto;
+  &::-webkit-scrollbar{
+      display: none;
+      background-color:transparent;
+  }
+}
+.tab {
+  display: flex;
+  align-items: center;
+  padding: 6px 0;
+  white-space: nowrap;
+}
 /************* Style for Waterfall ******************/
 .waterfall{
   &_container {
@@ -208,9 +293,6 @@ html {
     align-items: center;
     flex-direction: column;
     border-radius: 6px;
-    &_small {
-      width: 106px;
-    }
     p {
       font-size: 10px;
       margin: 4px 0;
