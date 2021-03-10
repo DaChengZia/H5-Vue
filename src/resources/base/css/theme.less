@@ -21,42 +21,26 @@
     }
   }
 }
-/************* Style for weui ******************/
-.weui-search-bar {
-  background-color: #fff;
-}
-.weui-search-bar__form,
-.weui-search-bar__label {
-  background-color: #f5f6f8;
-}
-.weui {
-  &-tabbar {
-    background-color: #fff;
+/************* Style for Searchbar ******************/
+.search-bar {
+  background: #f5f6f8;
+  &-message {
+    background: url(../../../assets/imgs/message.jpg) no-repeat;
+    background-size: contain;    
   }
+  .search-icon {
+    background: url(../../../assets/icons/index/icon_grabble.png) no-repeat;
+    background-size: contain;
+  }
+  .search-input {
+    background-color: transparent;
+    color: #565656;
+  }
+}
+/************* Style for weui ******************/
+.weui {
   &-tab__content {
     background: #f8faf9;
-  }
-  &-navbar {
-    background: #fff;
-    &-greey {
-      background: #f8faf9;
-    }
-    &__item {
-      &_active {
-        > span {
-          background: url(../../../assets/icons/index/icon_nev.png) no-repeat;
-          background-size: contain;
-        }
-      }
-      &_active1 {
-        color: #26ce9a;
-        &:before {
-          background: url(../../../assets/icons/index/icon_z.png) no-repeat;
-          background-size: contain;
-        }
-      }
-  
-    }
   }
 }
 /************* Style for List ******************/
@@ -123,4 +107,78 @@
 /************* Style for chooseMerchant ******************/
 .chooseMerchant_Wrap {
   background-color: #f8faf9;
+}
+/************* Style for Store top detail ******************/
+.store-details {
+  &-container {
+    > p {
+      color: #000;
+    }
+  }
+  &-location {
+    span {
+      background: url(../../../assets/icons/index/icon_location.png) no-repeat;
+      background-size: contain;
+    }
+    color: #818181;
+  }
+}
+/************* Style for Store goods ******************/
+.store-goods {
+  &-wrap {
+    background: #f4f4f4;
+  }
+  &-tab-mainly {
+    .tab-mainly-item {
+      &-selected {
+        background: #fff;
+        color: green;
+      }
+    }
+  }
+  &-container {
+    background: #fff;
+    .store-goods-tab-secondary {
+      .tab-secondary-item {
+        background: #f5f5f5;
+        &-selected {
+          background: #e1fff7;
+          color: #26ce9a;
+        }
+      }
+      &-arrow {
+
+        background: url(../../../assets/imgs/triangle.jpg) no-repeat center;
+        background-size: 20px;
+        &.secondary-arrow-expand {
+          background: url(../../../assets/imgs/triangle1.jpg) no-repeat center;
+          background-size: 20px;
+        }
+      }
+      &-sort {
+        .tab-secondary-sort{
+          &-price,&-amount {
+            color: #999999;
+          }
+          &-price,&-icon {
+            span {
+              background: url(../../../assets/imgs/sort.jpg) no-repeat center;
+              background-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-item {
+    &-price {
+      span {
+        color: #ff9d4b;
+      }
+    }
+    &-add {
+      background: url(../../../assets/icons/index/icon_add.png) #26ce9a no-repeat center;
+      background-size:8px;
+    }
+  }
 }

@@ -60,7 +60,6 @@ html {
 }
 /************* Style for Homepage ******************/
 .homePage {
-  height: 100%;
   .collectCoin{
       height: 180px;
       text-align: center;
@@ -93,7 +92,6 @@ html {
   &_wrap {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    margin-top: -10px;
     .recommend {
         margin: 10px;
         font-size: 13px;
@@ -152,50 +150,38 @@ html {
             width: 18px;
             height: 18px;
             border-radius: 10px;
-            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAAHeEJUAAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDAyIDc5LjE2NDM1MiwgMjAyMC8wMS8zMC0xNTo1MDozOCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIxLjEgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjA5MjcyRENCN0IzNzExRUJBQjU5REVEQ0NEMTNCNDQxIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjA5MjcyRENDN0IzNzExRUJBQjU5REVEQ0NEMTNCNDQxIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDkyNzJEQzk3QjM3MTFFQkFCNTlERURDQ0QxM0I0NDEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDkyNzJEQ0E3QjM3MTFFQkFCNTlERURDQ0QxM0I0NDEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5xK7VhAAAA80lEQVR42mL4//8/AxDLgWgYAwwYwSJAMSBmBAggBmRlLFBREJBHUQYQQDAOA5IKRhDBBMRySIIwBfLIOuSgqh+COAABBLMRhD/D2Ojmw83+iWQ2iP7JxIAJGHFqh4GvMAZAACGrhAGQHWxA/BeIWVDMxaIYWYARWQJk3Weogv9oChnQxH+SbDI6+AWl/6JLAAQQNpN3QWk3Yj1H0HqsgCSFu3AEFbLYLpAb/xNr4h4i1O0ZQF+zYHMPNoUAAYacQ3Dh3f9RwX5CehiJCElsChip4ndSAM0M3Y2WvP7jya3YkiM63k8Tl45GFOFcjMY/QEgDAO2e2g+iIAA+AAAAAElFTkSuQmCC) #26ce9a no-repeat center;
-            background-size: 8px;
           }
         }
     }
   }
 }
-/************* Style for weui ******************/
-.weui {
-  &-navbar {
-    &:after {
-      visibility: hidden;
-    }
-    &__item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      &:after {
-        visibility: hidden;
-      }
-      &_active {
-        font-size: 18px;
-        font-weight: 600;
-        > span {
-          width: 20px;
-          height: 6px;
-          display: block;
-        }
-      }
-      &_active1 {
-        font-weight: 600;
-        &:before {
-          width: 30px;
-          height: 6px;
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: calc(50% - 15px);
-          display: block;
-        }
-      }
-  
-    }
+
+/************* Style for Searchbar ******************/
+.search-bar {
+  flex: 1;
+  display: flex;
+  padding: 8px 12px;
+  border-radius: 16px;
+  align-items: center;
+  &-container {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+  }
+  &-message {
+    margin-left: 10px;
+    width: 30px;
+    height: 30px; 
+  }
+  .search-icon {
+    width: 20px;
+    height: 16px;
+  }
+  .search-input {
+    border: none;
+    outline: none;
+    margin-left: 5px;
+    font-size: 10px;
   }
 }
 
@@ -259,6 +245,7 @@ html {
   }
 }
 .tab-container {
+  margin: 0 10px;
   overflow-y: auto;
   &::-webkit-scrollbar{
       display: none;
@@ -349,6 +336,198 @@ html {
       position: absolute;
       bottom: 10px;
       left: 50%;
+    }
+  }
+}
+
+/************* Style for Store top detail ******************/
+.store-details {
+  &-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    > p {
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+  &-location {
+    display: flex;
+    align-items: center;
+    span {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 4px;
+      line-height: 1.2;
+    }
+    font-size: 12px;
+  }
+}
+
+/************* Style for Store goods ******************/
+.homePage-storegoods {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .homePage_wrap {
+    height: inherit;
+    overflow: hidden;
+    .homePage_container {
+      height: inherit;
+      display: flex;
+      flex-direction: column;
+      .weui-tab{
+        flex: 1;
+        .weui-tab__content {
+          height: 100%;
+          .store-goods-wrap {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.weui-tab__panel {
+  &::-webkit-scrollbar{
+    display: none;
+    background-color:transparent;
+  }
+}
+
+.store-goods {
+  &-wrap {
+    background: #f4f4f4;
+    display: flex;
+  }
+  &-tab-mainly {
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    font-size: 10px;
+    .tab-mainly-item {
+      padding: 20px 16px;
+      &-selected {
+        background: #fff;
+        color: green;
+      }
+    }
+  }
+  &-container {
+    background: #fff;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-size: 10px;
+    .store-goods-tab-secondary {
+      white-space: nowrap;
+      overflow-y: auto;
+      display: flex;
+      &::-webkit-scrollbar{
+        display: none;
+        background-color:transparent;
+      }
+      .tab-secondary-item {
+        padding: 6px 16px;
+        margin-right: 10px;
+        background: #f5f5f5;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        &-selected {
+          background: #e1fff7;
+          color: #26ce9a;
+        }
+      }
+      &-container {
+        margin-left: 10px;
+      }
+      &-wrap {
+        display: flex;
+      }
+      &-arrow {
+        width: 40px;
+        height: 40px;
+        background: url(../../../assets/imgs/triangle.jpg) no-repeat center;
+        background-size: 20px;
+        &.secondary-arrow-expand {
+          background: url(../../../assets/imgs/triangle1.jpg) no-repeat center;
+          background-size: 20px;
+        }
+      }
+      &-sort {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        .tab-secondary-sort{
+          &-price,&-amount {
+            color: #999999;
+            padding: 4px 8px;
+          }
+          &-price,&-icon {
+            display: flex;
+            align-items: center;
+            span {
+              display: inline-block;
+              width: 10px;
+              height: 16px;
+              margin-left: 4px;
+              background: url(../../../assets/imgs/sort.jpg) no-repeat center;
+              background-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-item {
+    display: flex;
+    padding: 10px 0;
+    justify-content: space-between;
+    > img {
+      width: 130px;
+      height: 100px;
+      display: block;
+    }
+    &-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0 20px;
+      p {
+        font-size: 14px;
+        font-weight: 500;
+      }
+      &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+    &-price {
+      span {
+        color: orange;
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+    &-add {
+      width: 18px;
+      height: 18px;
+      border-radius: 10px;
+      background: url(../../../assets/icons/index/icon_add.png) #26ce9a no-repeat center;
+      background-size:8px;
+    }
+    &-wrap {
+      flex: 1;
+      overflow-y: auto;
+      &::-webkit-scrollbar{
+        display: none;
+        background-color:transparent;
+      }
     }
   }
 }
