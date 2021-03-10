@@ -117,32 +117,20 @@
                             </div>
                         </div> -->
                         <!-- 六环服饰 -->
-                        <div id="s2" class="weui-tab__content" style="opacity: 1; display: block;">
+                        <!-- <div id="s2" class="weui-tab__content" style="opacity: 1; display: block;">
                             <div class="clothes-wrap">
                                 <div class="clothes-banner">
                                     <img src="../../assets/icons/index/banner.png" alt="">
                                 </div>
                                 <div class="clothes-category-wrap">
-                                    <div class="clothes-category-item">
+                                <tab>
+                                    <tab-item v-for="(item, index) in clothesTab" :key="index">
+                                        <div class="clothes-category-item">
                                         <img src="../../assets/imgs/clothes.jpg" alt="">
-                                        <p>新品速递</p>
+                                        <p>{{item.title}}</p>
                                     </div>
-                                    <div class="clothes-category-item">
-                                        <img src="../../assets/imgs/clothes.jpg" alt="">
-                                        <p>新品速递</p>
-                                    </div>
-                                    <div class="clothes-category-item">
-                                        <img src="../../assets/imgs/clothes.jpg" alt="">
-                                        <p>新品速递</p>
-                                    </div>
-                                    <div class="clothes-category-item">
-                                        <img src="../../assets/imgs/clothes.jpg" alt="">
-                                        <p>新品速递</p>
-                                    </div>
-                                    <div class="clothes-category-item">
-                                        <img src="../../assets/imgs/clothes.jpg" alt="">
-                                        <p>新品速递</p>
-                                    </div>
+                                    </tab-item>
+                                </tab>
                                 </div>
                                 <div class="clothes-declare"><img src="../../assets/imgs/declare.jpg" alt=""></div>
                                 <div class="clothes-container">
@@ -172,9 +160,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- 星夜生活 -->
-                        <!-- <div id="s3" class="weui-tab__content" style="opacity: 1; display: block;">
+                        <div id="s3" class="weui-tab__content" style="opacity: 1; display: block;">
                             <div class="clothes-wrap lifes-content">
                                 <div class="clothes-banner">
                                 <div class="swiper_container">
@@ -187,26 +175,14 @@
                                     <img src="../../assets/imgs/lifesbannertext.jpg" alt="">
                                 </div>
                                 <div class="clothes-category-wrap">
-                                    <div class="clothes-category-item">
-                                        <img src="../../assets/imgs/lifes.jpg" alt="">
-                                        <p>香薰</p>
-                                    </div>
-                                    <div class="clothes-category-item">
-                                        <img src="../../assets/imgs/lifes.jpg" alt="">
-                                        <p>香薰</p>
-                                    </div>
-                                    <div class="clothes-category-item">
-                                        <img src="../../assets/imgs/lifes.jpg" alt="">
-                                        <p>香薰</p>
-                                    </div>
-                                    <div class="clothes-category-item">
-                                        <img src="../../assets/imgs/lifes.jpg" alt="">
-                                        <p>香薰</p>
-                                    </div>
-                                    <div class="clothes-category-item">
-                                        <img src="../../assets/imgs/lifes.jpg" alt="">
-                                        <p>香薰</p>
-                                    </div>
+                                    <tab>
+                                        <tab-item v-for="(item, index) in clothesTab" :key="index">
+                                            <div class="clothes-category-item">
+                                            <img src="../../assets/imgs/lifes.jpg" alt="">
+                                            <p>{{item.title}}</p>
+                                        </div>
+                                        </tab-item>
+                                    </tab>
                                 </div>
                                 <div class="clothes-container">
                                     <div class="clothes-item">
@@ -235,7 +211,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -271,6 +247,28 @@
             title: '优乐多酸奶饮料牛奶100ml*20瓶',
             price: '￥24.90',
             others: '/盒'
+        },
+    ];
+    const clothesTab = [
+        {
+            src: '../../assets/imgs/goods.jpg',
+            title: '新品速递',
+        },
+        {
+            src: '../../assets/imgs/goods.jpg',
+            title: '冰点特价',
+        },
+        {
+            src: '../../assets/imgs/goods.jpg',
+            title: '男装',
+        },
+        {
+            src: '../../assets/imgs/goods.jpg',
+            title: '女装',
+        },
+        {
+            src: '../../assets/imgs/goods.jpg',
+            title: '鞋类',
         },
     ];
     const storegoods = [
@@ -322,6 +320,7 @@
             return {
                 tabList,
                 tabList1,
+                clothesTab,
                 recommendData,
                 storegoods
             }
