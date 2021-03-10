@@ -1,6 +1,6 @@
 <template>
     <!-- 如果是店铺首页添加class：homePage-storegoods -->
-    <div class="homePage">
+    <div class="homePage homePage-storegoods">
             <div class="store-details-container">
                 <p>Today便利店</p>
                 <div class="store-details-location">
@@ -8,15 +8,15 @@
                     湖北省武汉市洪山区南湖大道501
                 </div>
             </div>
-        <div class="collectCoin"></div>
+        <!-- <div class="collectCoin"></div> -->
         <div class="homePage_wrap">
-            <div class="homePage_game">
+            <!-- <div class="homePage_game">
                 <div><img src="../../assets/icons/index/icon_turntable.png" alt="">幸运转盘</div>
                 <div><img src="../../assets/icons/index/icon_jigsaw.png" alt="">拼什么拼</div>
                 <div class="game_mission"><img src="../../assets/icons/index/icon_mission.png" alt="">赚多多币</div>
                 <div><img src="../../assets/icons/index/icon_tank.png" alt="">坦克大战</div>
                 <div><img src="../../assets/icons/index/icon_convent.png" alt="">兑话费</div>
-            </div>
+            </div> -->
 
             <div class="homePage_container">
                 <div class="search-bar-container">
@@ -31,9 +31,8 @@
                         <tab-item :currentSelected="index === 0" :class="{'tab-selected-type1': index===0}" v-for="(item, index) in tabList" :key="index">{{item}}</tab-item>
                     </tab>
                     <div class="weui-tab__panel">
-                        <!-- //首页 - 全部 -->
-                        <div id="s0" class="weui-tab__content" style="display: block; opacity: 1;">
-                            <!-- //老板推荐 -->
+                        <!-- 首页 - 全部 -->
+                        <!-- <div id="s0" class="weui-tab__content" style="display: block; opacity: 1;">
                             <div class="recommend">
                                 <div class="recommend-head">
                                     <h2 class="recommend">老板推荐</h2>
@@ -50,7 +49,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- //swiper轮播图 -->
                             <div class="swiper_container">
                                 <img class="swiper_item" src="../../assets/icons/index/banner.png" alt="">
                                 <div class="swiper_dot_container">
@@ -58,7 +56,6 @@
                                     <div class="swiper_dot swiper_dot_active"></div>
                                 </div>
                             </div>
-                            <!-- //<Swiper :list="demo03_list" auto style="width:80%;margin:0 auto;" height="180px" dots-class="custom-bottom" dots-position="center"></Swiper> -->
                             <div class="weui-tab" id="t1_1" style="height:auto;">
                                 <tab>
                                     <tab-item :currentSelected="index === 0" :class="{'tab-selected-type2': index===0}" v-for="(item, index) in tabList1" :key="index">{{item}}</tab-item>
@@ -72,18 +69,19 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- 店铺首页 -->
                         <!-- <div id="s1" class="weui-tab__content" style="opacity: 1; display: block;">
-                            <div class="store-goods-wrap">
+                            <div class="store-goods-wrap store-goods-hot">
                                 <div class="store-goods-tab-mainly">
-                                    <div class="tab-mainly-item">热卖</div>
-                                    <div class="tab-mainly-item tab-mainly-item-selected">休闲食品</div>
+                                    <div class="tab-mainly-item tab-mainly-item-selected tab-mainly-item-hot"><span>荐</span>热卖</div>
+                                    <div class="tab-mainly-item">休闲食品</div>
                                     <div class="tab-mainly-item">酒水饮料</div>
                                     <div class="tab-mainly-item">粮油调料</div>
                                 </div>
                                 <div class="store-goods-container">
                                     <div class="store-goods-tab-secondary-container">
+                                        //<div class="store-goods-title">热卖</div>
                                         <div class="store-goods-tab-secondary-wrap">
                                             <div class="store-goods-tab-secondary">
                                                 <div class="tab-secondary-item tab-secondary-item-selected">饮用水</div>
@@ -118,17 +116,223 @@
                                 </div>
                             </div>
                         </div> -->
-                        <div id="s2" class="weui-tab__content" style="opacity: 1; display: none;">六环服饰</div>
-                        <div id="s3" class="weui-tab__content" style="opacity: 1; display: none;">星夜生活</div>
+                        <!-- 六环服饰 -->
+                        <div id="s2" class="weui-tab__content" style="opacity: 1; display: block;">
+                            <div class="clothes-wrap">
+                                <div class="clothes-banner">
+                                    <img src="../../assets/icons/index/banner.png" alt="">
+                                </div>
+                                <div class="clothes-category-wrap">
+                                    <div class="clothes-category-item">
+                                        <img src="../../assets/imgs/clothes.jpg" alt="">
+                                        <p>新品速递</p>
+                                    </div>
+                                    <div class="clothes-category-item">
+                                        <img src="../../assets/imgs/clothes.jpg" alt="">
+                                        <p>新品速递</p>
+                                    </div>
+                                    <div class="clothes-category-item">
+                                        <img src="../../assets/imgs/clothes.jpg" alt="">
+                                        <p>新品速递</p>
+                                    </div>
+                                    <div class="clothes-category-item">
+                                        <img src="../../assets/imgs/clothes.jpg" alt="">
+                                        <p>新品速递</p>
+                                    </div>
+                                    <div class="clothes-category-item">
+                                        <img src="../../assets/imgs/clothes.jpg" alt="">
+                                        <p>新品速递</p>
+                                    </div>
+                                </div>
+                                <div class="clothes-declare"><img src="../../assets/imgs/declare.jpg" alt=""></div>
+                                <div class="clothes-container">
+                                    <div class="clothes-item">
+                                        <img class="clothes-item-img" src="../../assets/imgs/clothes1.jpg" alt="">
+                                        <p>嘿马七作日系男士冬季立领短款加厚羽绒服潮防风宽松防水防水防水</p>
+                                        <div class="clothes-item-bottom">
+                                            <span>￥378</span>
+                                            <img src="../../assets/imgs/discount.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="clothes-item">
+                                        <img class="clothes-item-img" src="../../assets/imgs/clothes1.jpg" alt="">
+                                        <p>嘿马七作日系男士冬季立领短款加厚羽绒服潮防风宽松防水防水防水</p>
+                                        <div class="clothes-item-bottom">
+                                            <span>￥378</span>
+                                            <img src="../../assets/imgs/discount.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="clothes-item">
+                                        <img class="clothes-item-img" src="../../assets/imgs/clothes1.jpg" alt="">
+                                        <p>嘿马七作日系男士冬季立领短款加厚羽绒服潮防风宽松防水防水防水</p>
+                                        <div class="clothes-item-bottom">
+                                            <span>￥378</span>
+                                            <img src="../../assets/imgs/discount.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 星夜生活 -->
+                        <!-- <div id="s3" class="weui-tab__content" style="opacity: 1; display: block;">
+                            <div class="clothes-wrap lifes-content">
+                                <div class="clothes-banner">
+                                <div class="swiper_container">
+                                    <img class="swiper_item" src="../../assets/imgs/lifesbanner.jpg" alt="">
+                                    <div class="swiper_dot_container">
+                                        <div class="swiper_dot"></div>
+                                        <div class="swiper_dot swiper_dot_active"></div>
+                                    </div>
+                                </div>
+                                    <img src="../../assets/imgs/lifesbannertext.jpg" alt="">
+                                </div>
+                                <div class="clothes-category-wrap">
+                                    <div class="clothes-category-item">
+                                        <img src="../../assets/imgs/lifes.jpg" alt="">
+                                        <p>香薰</p>
+                                    </div>
+                                    <div class="clothes-category-item">
+                                        <img src="../../assets/imgs/lifes.jpg" alt="">
+                                        <p>香薰</p>
+                                    </div>
+                                    <div class="clothes-category-item">
+                                        <img src="../../assets/imgs/lifes.jpg" alt="">
+                                        <p>香薰</p>
+                                    </div>
+                                    <div class="clothes-category-item">
+                                        <img src="../../assets/imgs/lifes.jpg" alt="">
+                                        <p>香薰</p>
+                                    </div>
+                                    <div class="clothes-category-item">
+                                        <img src="../../assets/imgs/lifes.jpg" alt="">
+                                        <p>香薰</p>
+                                    </div>
+                                </div>
+                                <div class="clothes-container">
+                                    <div class="clothes-item">
+                                        <img class="clothes-item-img" src="../../assets/imgs/lifes1.jpg" alt="">
+                                        <p>素士H5点吹风机梵高联名礼盒装</p>
+                                        <div class="clothes-item-bottom">
+                                            <span>￥378</span>
+                                            <img src="../../assets/imgs/discount.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="clothes-item">
+                                        <img class="clothes-item-img" src="../../assets/imgs/lifes1.jpg" alt="">
+                                        <p>素士H5点吹风机梵高联名礼盒装</p>
+                                        <div class="clothes-item-bottom">
+                                            <span>￥378</span>
+                                            <img src="../../assets/imgs/discount.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="clothes-item">
+                                        <img class="clothes-item-img" src="../../assets/imgs/lifes1.jpg" alt="">
+                                        <p>素士H5点吹风机梵高联名礼盒装</p>
+                                        <div class="clothes-item-bottom">
+                                            <span>￥378</span>
+                                            <img src="../../assets/imgs/discount.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </template>
+<style lang="less" scoped>
+.clothes-wrap {
+    background: #fff;
+    .clothes-banner {
+        width: 100%;
+        padding: 10px;
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+    .clothes-category-wrap {
+        display: flex;
+        margin-right: 20px;
+        overflow-x: auto;
+        white-space: nowrap;
+        &::-webkit-scrollbar{
+            display: none;
+            background-color:transparent;
+        }
+        .clothes-category-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 10px;
+            img {
+                width: 80px;
+            }
+            p {
+                font-weight: 600;
+                color: #000;
+                line-height: 1.2;
+            }
+        }
+    }
+    .clothes-declare {
+        width: 100%;
+        padding: 14px 10px 10px;
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+    .clothes-container {
+        .clothes-item {
+            width: 40%;
+            float: left;
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+            &-img {
+                width: 100%;
+            }
+            p {
+                line-height: 1.4;
+                margin: 6px 0 4px;
+                text-overflow: -o-ellipsis-lastline;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                // line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+            &-bottom {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                span {
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+                img {
+                    width: 80px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+}
+.lifes-content {
+    .swiper_container {
+        padding: 0;
+        height: unset;
+    }
+}
+</style>
+
 
 <script>
-    import { Waterfall, Tab, TabItem } from '../../components/index.js';
+    import { Tab, TabItem } from '../../components/index.js';
     const tabList = ['全部', '本店好货', '六环服饰', '星夜生活'];
     const tabList1 = ['热卖商品', '食品饮料', '粮油副食', '家居清洁', '食品饮料', '粮油副食', '家居清洁'];
     const recommendData = [
@@ -199,7 +403,6 @@
     export default {
         name: 'homePage',
         components: {
-            Waterfall,
             Tab,
             TabItem,
         },

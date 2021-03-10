@@ -130,9 +130,18 @@
   }
   &-tab-mainly {
     .tab-mainly-item {
+      &-hot {
+        span {
+          background: red;
+          color: #fff;
+        }
+      }
       &-selected {
         background: #fff;
-        color: green;
+        color: #26ce9a;
+        &::before {
+          background: #26ce9a;
+        }
       }
     }
   }
@@ -146,8 +155,12 @@
           color: #26ce9a;
         }
       }
+      &-container {
+        .store-goods-title{
+          color: #000;
+        }
+      }
       &-arrow {
-
         background: url(../../../assets/imgs/triangle.jpg) no-repeat center;
         background-size: 20px;
         &.secondary-arrow-expand {
@@ -181,4 +194,15 @@
       background-size:8px;
     }
   }
+}
+/************* Style for Clothes content ******************/
+.clothes-wrap {
+  background: #fff;
+  .clothes-category-wrap {
+    .clothes-category-item {
+        p {
+            color: #000;
+        }
+    }
+}
 }
