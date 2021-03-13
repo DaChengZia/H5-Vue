@@ -204,5 +204,259 @@
             color: #000;
         }
     }
+  }
 }
+/************* Style for Wallet ******************/
+.wallet {
+  &-wrap {
+    background: #fff;
+  }
+  &-account {
+    background: url(../../../assets/icons/wallet/bg_gold.png) no-repeat;
+    background-size: 100% 100%;
+    &-coin {
+      &-title {
+        > div {
+          background: url(../../../assets/icons/wallet/icon_gold_little.png) no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+    &-detail {
+      .account-detail-item {
+        color: #6e3c13;
+        &.paydetail {
+          > div {
+            background: url(../../../assets/icons/wallet/icon_detail.png) no-repeat center;
+            background-size: contain;
+          }
+        }
+        &.ruledetail {
+          > div {
+            background: url(../../../assets/icons/wallet/icon_rule.png) no-repeat;
+            background-size: contain;
+          }
+        }
+      }
+    }
+  }
+  &-banner {
+    background: #ffeed1;
+    &-img {
+      background: url(../../../assets/icons/wallet/img_red_packet.png) no-repeat;
+      background-size: 100% 100%;
+    }
+    &-time {
+      color: #a86122;
+      span {
+        color: #fff;
+        background: #faaf1c;
+      }
+    }
+  }
+  &-list{
+    &-item {
+      border-bottom: 1px solid #ededed;
+      &-discount {
+        > div {
+          background: url(../../../assets/icons/wallet/icon_kj_ticket.png) no-repeat center;
+          background-size: auto 100%;
+        }
+      }
+      &-redpacket {
+        > div {
+          background: url(../../../assets/icons/wallet/icon_red_packet.png) no-repeat center;
+          background-size: auto 100%;
+        }
+      }
+      &-phonebill {
+        > div {
+          background: url(../../../assets/icons/wallet/icon_phone.png) no-repeat center;
+          background-size: auto 100%;
+        }
+      }
+      &-right {
+        background: url(../../../assets/icons/other/icon_next_thin.png) no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+  }
+  &-tab {
+    &-item {
+      color: #676767;
+      &-active {
+        font-weight: 600;
+        color: #3C1313;
+        &:before {
+          background: #000;
+        }
+      }
+    }
+    &-list {
+      box-shadow: 0 6px 6px -3px rgba(162,162,162,0.1);
+      &-style1 {
+        .wallet-tab-list-left {
+          color: #af7c12;
+          > div:first-child {
+            background: #fdf8e1;
+          }
+        }
+      }
+      &-style2 {
+        .wallet-tab-list-left {
+          color: #ed8529;
+          > div:first-child {
+            background: #fce7dc;
+          }
+        }
+      }
+      &-style3 {
+        .wallet-tab-list-left {
+          color: #76adfb;
+          > div:first-child {
+            background: #d4f1ff;
+          }
+        }
+      }
+      &-left{
+        font-size: 12px;
+        font-weight: 600;
+        border-right: 1px solid #fff6ef;
+        > div:first-child {
+          font-size: 14px;
+        }
+        > div:last-child span {
+          font-size: 30px;
+          font-weight: 600;
+        }
+      }
+      &-right {
+        color: #fff;
+        background: #2bf2be;
+        font-size: 12px;
+      }
+      &-used {
+        background: url(../../../assets/icons/wallet/img_have.png) no-repeat center;
+        background-size: contain;
+      }
+    }
+  }
+}
+/************* Style for redpacket ******************/
+.redpacket {
+  &-item{
+    background: #fbf6f6;
+    &-used {
+      .redpacket-item-amount {
+        background: url(../../../assets/icons/wallet/bg_red_n.png) no-repeat center;
+        background-size: 100% 100%;
+        color: #636363;
+      }
+    }
+    &-amount {
+      background: url(../../../assets/icons/wallet/bg_red.png) no-repeat center;
+      background-size: 100% 100%;
+      color: #ca1a27;
+      &-left {
+        p {
+          color: #fff;
+          font-size: 24px;
+        }
+        div {
+          font-size: 12px;
+        }
+      }
+      &-right {
+        span {
+          font-size: 10px;
+        }
+      }
+    }
+    &-desc {
+      font-size: 10px;
+      font-weight: 600;
+      &-button {
+        font-weight: normal;
+        color: #fff;
+        background: #fa4145;
+      }
+    }
+  }
+}
+/************* Style for coupon ******************/
+.coupon-item-wrap {
+  flex-direction: column;
+  .redpacket-item-amount {
+    background: url(../../../assets/icons/wallet/bg_ticket_kj.png) no-repeat center;
+    background-size: 100% 100%;
+  }
+  .redpacket-item-desc {
+    div > span {
+      color: #ff3f40;
+    }
+  }
+  .coupon-item-used {
+    .redpacket-item-amount {
+      background: url(../../../assets/icons/wallet/bg_ticket_kj_n.png) no-repeat center;
+      background-size: 100% 100%;
+      color: #636363;
+    }
+  }
+}
+/************* Style for walletList ******************/
+.wallet-transaction-list {
+  border-bottom: 1px solid #efefef;
+  &-left {
+    p {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    div {
+      color: #797979;
+      font-size: 12px;
+    }
+  }
+  &-right {
+    color: #34cc9f;
+  }
+  &-add {
+    .wallet-transaction-list-right {
+      color: #feb31c;
+    }
+  }
+}
+/************* Style for wallet-rules ******************/
+.wallet-rules {
+  &-item {
+    font-size: 14px;
+    color: #161748;
+    width: 95%;
+    &-title {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      font-weight: 600;
+      margin: 10px 0;
+      span {
+        display: block;
+        width: 8px;
+        height: 22px;
+        margin-right: 8px;
+        border-radius: 4px;
+        background: #26ce9a;
+      }
+    }
+    ul {
+      list-style: disc;
+    }
+  }
+  &-banner {
+    background: url(../../../assets/icons/wallet/img_2.png) no-repeat center;
+    background-size: 100% 100%;
+  }
+  &-container {
+    .wallet-rules-item {
+      margin: 20px 0;
+    }
+  }
 }

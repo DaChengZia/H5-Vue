@@ -1,5 +1,5 @@
 <template>
-  <div class="container" id="container">
+  <!-- <div class="container" id="container">
     <div class="page tabbar js_show">
     <div class="page__bd">
         <div class="weui-tab">
@@ -26,17 +26,18 @@
         </div>
     </div>
     </div>
-  </div>
+  </div> -->
+      <wallet />
 </template>
 
 <script>
-import { homePage } from './pages/index.js'
+import { wallet } from './pages/index.js'
 import $ from 'jquery'
 
 export default {
   name: 'App',
   components: {
-    homePage
+    wallet
   }
 }
 // for search input
